@@ -4,7 +4,6 @@
 # In[19]:
 
 
-import random
 def Quiz_Game(start,name,numb):
     '''Author:Asher
     Game: Pub Quiz
@@ -30,8 +29,8 @@ Welcome to the world of {0}, {1}.'''
         
 #we either start the game or stop it depending on the user input
         if user_input =="y":
-            listQuestions=["\n\nQ. In the manga series Sailor Moon, what is the name of the cat?","\n\nQ. how many copies of the Harry Potter novels have been sold?"
-                           "\n\nQ. In The Lord of the Rings, what is the name of the dragon-like creatures the Nazgul ride on?","Do any of you even care?"
+            listQuestions=["\n\nQ. In the manga series Sailor Moon, what is the name of the cat?","\n\nQ. how many copies of the Harry Potter novels have been sold?",
+                           "\n\nQ. In The Lord of the Rings, what is the name of the dragon-like creatures the Nazgul ride on?","Do any of you even care?",
                            "\n\nQ. How many copies has One Piece sold?","In what year was Charlie and the Chocolate Factory published?"];
             listChoices=["\na. Apollo \nb. Artemis \nc. Luna","\na.500m \nb.720m \nc.340m",
             "\na. Fell-beasts \nb. Firedrakes \nc. Phoenixes","\na. no \nb. yes \nc. maybe",
@@ -39,11 +38,12 @@ Welcome to the world of {0}, {1}.'''
             correct_answers=["c","a","a","c","a","b"];
             #make a new list of questions with answers:
             newList=[listQuestions[0]+listChoices[0],listQuestions[1]+listChoices[1],
-                    listQuestions[2]+listChoices[2],listQuestions[3]+listChoices[3]
-                    listQuestions[4]+listChoices[4],listQuestions[5]+listChoices[5]];
+                    listQuestions[2]+listChoices[2],listQuestions[3]+listChoices[3],
+                    listQuestions[4]+listChoices[4],listQuestions[5]+listChoices[5],];
             #debugging
             print(listQuestions)
             #computer chooses a question at random;
+            import random
             AI_question=random.choice(newList);
             print(AI_question)
             answer_input=input('\nEnter your answer: ')
