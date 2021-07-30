@@ -31,14 +31,18 @@ Welcome to the world of {0}, {1}.'''
 #we either start the game or stop it depending on the user input
         if user_input =="y":
             listQuestions=["\n\nQ. In the manga series Sailor Moon, what is the name of the cat?","\n\nQ. how many copies of the Harry Potter novels have been sold?"
-                           "\n\nQ. In The Lord of the Rings, what is the name of the dragon-like creatures the Nazgul ride on?","Do any of you even care?"];
+                           "\n\nQ. In The Lord of the Rings, what is the name of the dragon-like creatures the Nazgul ride on?","Do any of you even care?"
+                           "\n\nQ. How many copies has One Piece sold?","In what year was Charlie and the Chocolate Factory published?"];
             listChoices=["\na. Apollo \nb. Artemis \nc. Luna","\na.500m \nb.720m \nc.340m",
-            "\na. Fell-beasts \nb. Firedrakes \nc. Phoenixes","\na. no \nb. yes \nc. maybe",];
-            correct_answers=["c","a","a","c"];
+            "\na. Fell-beasts \nb. Firedrakes \nc. Phoenixes","\na. no \nb. yes \nc. maybe",
+            "\na.490m \nb.228m \nc.600m","\na.1991 \nb.1964 \nb.1885"];
+            correct_answers=["c","a","a","c","a","b"];
             #make a new list of questions with answers:
-            newList=[listQuestions[0]+listChoices[0], listQuestions[1]+listChoices[1],
-                    listQuestions[2]+listChoices[2], listQuestions[3]+listChoices[3],];
-            
+            newList=[listQuestions[0]+listChoices[0],listQuestions[1]+listChoices[1],
+                    listQuestions[2]+listChoices[2],listQuestions[3]+listChoices[3]
+                    listQuestions[4]+listChoices[4],listQuestions[5]+listChoices[5]];
+            #debugging
+            print(listQuestions)
             #computer chooses a question at random;
             AI_question=random.choice(newList);
             print(AI_question)
@@ -60,7 +64,7 @@ Welcome to the world of {0}, {1}.'''
                 
 #catching some errors:
     elif start != "play":
-        print('You must enter the word "play" into the function to continue', end='.')
+        print('You must enter the word "play" into the function to continue')
     elif type(numb) != int or numb <= 0:
         print('\nYou must enter into the function an integer,\ni.e, whole numbers positive and negative, that is postive. Do not enter decimals, e.g. 2.5.')
     elif numb != int(3) or numb != int(5):
